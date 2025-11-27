@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="editor">
+      <h1>Portfolio Generator</h1>
+      <form id="profileForm">
+        <label>Full Name
+          <input type="text" id="name" placeholder="Jane Doe" />
+        </label>
+        <label>Title
+          <input type="text" id="title" placeholder="Frontend Developer" />
+        </label>
+        <label>Short Bio
+          <textarea id="bio" placeholder="A short bio about the person"></textarea>
+        </label>
+        <div class="pdf-inputs">
+          <label>Upload Resume (PDF)
+            <input type="file" id="pdfFile" accept="application/pdf" />
+          </label>
+          <label>or PDF URL
+            <input type="url" id="pdfUrl" placeholder="https://example.com/resume.pdf" />
+          </label>
+        </div>
+        <div class="buttons">
+          <button type="button" id="previewBtn">Live Preview</button>
+          <button type="button" id="exportBtn">Export Site (Download HTML)</button>
+        </div>
+      </form>
+      <p class="hint">Tip: to use a local file path like <code>e:\\Profile.pdf</code> in the "PDF URL" field, serve the file via a local server or upload it.</p>
+    </section>
+
+    <section class="preview">
+      <div class="card" id="card">
+        <header>
+          <h2 id="p_name">Your Name</h2>
+          <p id="p_title">Your Title</p>
+        </header>
+        <div class="p_body">
+          <p id="p_bio">Short bio will appear here.</p>
+        </div>
+        <div class="resume">
+          <div class="resume-controls">
+            <a id="resumeLink" href="#" target="_blank" rel="noopener" hidden>Open Resume</a>
+            <a id="downloadPdf" href="#" download hidden>Download Resume</a>
+          </div>
+          <div class="pdf-wrapper" id="pdfWrapper">
+            <iframe id="pdfFrame" src="" frameborder="0" hidden></iframe>
+            <div class="pdf-empty">No resume loaded</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
