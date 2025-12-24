@@ -28,3 +28,4 @@ Notes & limitations
 
 Want help deploying?
 - I can show how to host the exported HTML on GitHub Pages or Netlify and how to host your PDF so the resume link is permanent.
+- this is a simle project on Profile Generator
